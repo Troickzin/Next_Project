@@ -33,11 +33,11 @@ export default async function Page({ params }) {
           ></img>
           <p className="User_Name">{user.name}</p>
           <p className="Follows">
-            {user.followers + " Follower ·" + user.following + " Following"}
+            {user.followers + " Follower · " + user.following + " Following"}
           </p>
           <p className="User_Bio">{user.bio}</p>
         </div>
-        <div className="Orgs">
+        <div className="Footer">
           {user_orgs.length ? <p>Organizations</p> : <p></p>}
           <div className="Organizations_Content">
             {user_orgs
@@ -46,11 +46,10 @@ export default async function Page({ params }) {
                 })
               : ""}
           </div>
+          <Link className="User_Button" href={user.html_url} target="_blank">
+            <GrFormNextLink className="Icon" />
+          </Link>
         </div>
-
-        {/* <Link className="User_Button" href={user.html_url} target="_blank">
-          <GrFormNextLink className="Icon" />
-        </Link> */}
       </div>
     </>
   );

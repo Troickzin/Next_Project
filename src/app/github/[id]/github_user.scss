@@ -56,7 +56,7 @@
     }
   }
 
-  .Orgs {
+  .Footer {
     background-color: rgba(17, 19, 23, 1);
     width: 455px;
     height: auto;
@@ -70,6 +70,40 @@
       font-size: 16px;
     }
 
+    .User_Button {
+      background-color: rgb(68, 187, 132);
+      border: none;
+      width: 35px;
+      height: 35px;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      .Icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        width: 25px;
+        height: 25px;
+        color: rgb(38, 40, 45);
+        transition: 0.2s;
+        animation: buttonIconAnimation 2s infinite;
+      }
+
+      &:hover {
+        transform: scale(0.9);
+        background-color: rgb(52, 149, 103);
+      }
+      &:hover .Icon {
+        color: rgba(189, 195, 212, 1);
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+      }
+    }
+
     .Organizations_Content {
       margin-top: 30px;
 
@@ -80,32 +114,25 @@
       }
     }
   }
+}
 
-  .User_Button {
-    background-color: rgb(68, 187, 132);
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 10px;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    cursor: pointer;
-    transition: 0.2s;
+@keyframes buttonIconAnimation {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
 
-    .Icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-      width: 25px;
-      height: 25px;
-    }
+  30% {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
 
-    &:hover {
-      transform: scale(1.1);
-      background-color: rgb(52, 149, 103);
-      box-shadow: 0px 0px 5px 0px rgb(68, 187, 132);
-    }
+  50% {
+    transform: translateX(-50%) translateY(-50%) rotate(-80deg);
+  }
+  70% {
+    transform: translateX(-50%) translateY(-50%) rotate(-15deg);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
   }
 }
