@@ -38,7 +38,7 @@ export default async function Page({ params }) {
           <p className="User_Bio">{user.bio}</p>
         </div>
         <div className="Orgs">
-          {user_orgs ? <p>Organizations</p> : ""}
+          {user_orgs.length ? <p>Organizations</p> : <p></p>}
           <div className="Organizations_Content">
             {user_orgs
               ? user_orgs.map((e) => {

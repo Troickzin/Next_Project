@@ -10,6 +10,7 @@
   border-radius: 20px;
   text-align: center;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  color: rgba(189, 195, 212, 1);
 
   .Header {
     position: relative;
@@ -41,7 +42,7 @@
 
     .Follows {
       font-weight: 600;
-      color: rgb(161, 161, 161);
+      color: #7f8494;
       margin-top: 12px;
       font-size: 14px;
     }
@@ -51,7 +52,7 @@
       margin-top: 38px;
       padding-bottom: 48px;
       font-weight: 600;
-      color: rgb(161, 161, 161);
+      color: #7f8494;
     }
   }
 
@@ -64,7 +65,7 @@
 
     p {
       font-weight: 600;
-      color: rgb(161, 161, 161);
+      color: #7f8494;
       margin-top: 20px;
       font-size: 16px;
     }
