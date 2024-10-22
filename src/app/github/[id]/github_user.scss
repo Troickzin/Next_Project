@@ -1,33 +1,83 @@
 .User_Profile {
-  width: 300px;
-  height: 400px;
-  background-color: rgb(17, 17, 17);
-  position: relative;
+  width: auto;
+  height: auto;
+  position: absolute;
   justify-items: center;
   margin: auto;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   border-radius: 20px;
   text-align: center;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
 
-  .User_Avatar {
-    margin-top: 30px;
-    border: 2px solid rgb(68, 187, 132);
-    box-shadow: 0px 0px 8px 0px rgb(68, 187, 132);
-    box-sizing: content-box;
+  .Header {
+    position: relative;
+    background-color: rgba(17, 19, 23, 1);
+    border-radius: 15px 15px 0px 0px;
+    width: 455px;
+    height: 140px;
   }
 
-  .User_Name {
-    margin-top: 30px;
-    font-weight: 800;
+  .Infos {
+    background-color: rgba(17, 19, 23, 1);
+    width: 455px;
+    height: auto;
+    border-top: 2px solid #484c56;
+
+    .User_Avatar {
+      border: 2px solid #484c56;
+      box-sizing: content-box;
+      position: absolute;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+
+    .User_Name {
+      font-weight: 800;
+      margin-top: 130px;
+      font-size: 25px;
+    }
+
+    .Follows {
+      font-weight: 600;
+      color: rgb(161, 161, 161);
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .User_Bio {
+      padding: 0px 10px 0px 10px;
+      margin-top: 38px;
+      padding-bottom: 48px;
+      font-weight: 600;
+      color: rgb(161, 161, 161);
+    }
   }
 
-  .User_Bio {
-    margin-top: 20px;
-    font-weight: 600;
-    padding: 0px 10px 0px 10px;
-    color: rgb(161, 161, 161);
+  .Orgs {
+    background-color: rgba(17, 19, 23, 1);
+    width: 455px;
+    height: auto;
+    border-top: 2px solid #484c56;
+    border-radius: 0px 0px 15px 15px;
+
+    p {
+      font-weight: 600;
+      color: rgb(161, 161, 161);
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .Organizations_Content {
+      margin-top: 30px;
+
+      padding-bottom: 50px;
+
+      img {
+        margin: 0px 5px 0px 5px;
+      }
+    }
   }
 
   .User_Button {
