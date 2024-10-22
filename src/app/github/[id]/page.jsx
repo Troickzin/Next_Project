@@ -1,15 +1,16 @@
-"use client";
+import Link from "next/link";
 import "./github_user.scss";
+import { GrFormNextLink } from "react-icons/gr";
 
-async function getUserGithubAPI(user) {
-  return fetch(`https://api.github.com/users/${user}`).then((res) =>
-    res.json()
-  );
+export async function getUserGithubAPI(user) {
+  let data = await fetch(`https://api.github.com/users/${user}`);
+  let posts = await data.json();
+  return posts;
 }
 
 export default async function Page({ params }) {
-  const user = await getUserGithubAPI(params.id);
-
+  const param = await params;
+  const user = await getUserGithubAPI("troickzin");
   return (
     <>
       <div className="User_Profile">
@@ -22,6 +23,9 @@ export default async function Page({ params }) {
         ></img>
         <p className="User_Name">{user.name}</p>
         <p className="User_Bio">{user.bio}</p>
+        <Link className="User_Button" href={user.html_url} target="_blank">
+          <GrFormNextLink className="Icon" />
+        </Link>
       </div>
     </>
   );
