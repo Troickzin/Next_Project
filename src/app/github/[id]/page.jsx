@@ -10,10 +10,11 @@ export async function getUserGithubAPI(user) {
 
 export default async function Page({ params }) {
   const param = await params;
-  const user = await getUserGithubAPI("troickzin");
+  const user = await getUserGithubAPI(param.id);
   return (
     <>
       <div className="User_Profile">
+        <pre>{user.message}</pre>
         <img
           src={user.avatar_url}
           width={100}
