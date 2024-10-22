@@ -1,4 +1,4 @@
-import styles from "./teste.module.scss";
+"use client";
 
 async function getUserGithubAPI(user) {
   return fetch(`https://api.github.com/users/${user}`).then((res) =>
@@ -6,12 +6,11 @@ async function getUserGithubAPI(user) {
   );
 }
 
-export default async function Teste() {
-  const user = await getUserGithubAPI("troickzin");
+export default async function Page({ params }) {
+  const user = await getUserGithubAPI(params.id);
 
   return (
-    <div className={styles.red}>
-      <h1>Teste</h1>
+    <>
       <p>{user.name}</p>
       <img
         src={user.avatar_url}
@@ -20,6 +19,6 @@ export default async function Teste() {
         style={{ borderRadius: "50%" }}
       ></img>
       <p>{user.bio}</p>
-    </div>
+    </>
   );
 }
