@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./github_user.scss";
 import { GrFormNextLink } from "react-icons/gr";
+import { IoIosReturnLeft } from "react-icons/io";
 
 export async function getUserGithubAPI(user) {
   let data = await fetch(`https://api.github.com/users/${user}`);
@@ -48,6 +49,9 @@ export default async function Page({ params }) {
           </div>
           <Link className="User_Button" href={user.html_url} target="_blank">
             <GrFormNextLink className="Icon" />
+          </Link>
+          <Link className="Return_Button" href={"/github"}>
+            <IoIosReturnLeft className="Icon" />
           </Link>
         </div>
       </div>

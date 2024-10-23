@@ -16,6 +16,29 @@
   font-family: var(--font-geist-sans);
 }
 
+.Github_Button {
+  border: none;
+  position: relative;
+  background-color: rgb(47, 139, 47);
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 12px;
+  transition: 0.2s;
+  color: rgba(189, 195, 212, 1);
+  font-weight: 600;
+
+  &:hover {
+    transform: scale(0.9);
+    color: rgba(17, 19, 23, 1);
+    background-color: rgb(65, 190, 65);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;

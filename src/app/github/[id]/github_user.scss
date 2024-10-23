@@ -103,6 +103,39 @@
         transform: translateX(-50%) translateY(-50%) rotate(-45deg);
       }
     }
+    .Return_Button {
+      background-color: rgb(183, 56, 92);
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 10px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+
+      .Icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 20px;
+        height: 20px;
+        color: rgb(215, 219, 230);
+        transition: 0.2s;
+        // animation: buttonIconAnimation 2s infinite;
+      }
+
+      &:hover {
+        transform: scale(0.9);
+        background-color: rgb(152, 30, 81);
+      }
+      &:hover .Icon {
+        color: rgba(17, 19, 23, 1);
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
 
     .Organizations_Content {
       margin-top: 30px;
