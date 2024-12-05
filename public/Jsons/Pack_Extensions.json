@@ -1,0 +1,11 @@
+{
+  "Pack_Extensions": {
+    "Minecraft": {
+      "Additions": [
+        "Items"
+      ],
+      "Description": "Minecraft vanilla items configurations",
+      "Version": "1.20.1"
+    }
+  }
+}
